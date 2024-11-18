@@ -1,32 +1,44 @@
 header {
-    height: 100px;
+    height: auto;
     width: auto;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 
 footer { 
-    height: 100px;
+    height: auto;
     width: auto;
-    background-color: blue; /*a cor azul é só para identificar onde está o elemento por enquanto*/
+    /*background-color: blue; a cor azul é só para identificar onde está o elemento por enquanto*/
     margin-bottom: 0%;
 }
 
 
 .listaDiv {  /* estilizando a div que vai conter a todo list*/
-    width: 100px;
-    height: 100px;
-    background-color: aquamarine;  /*a cor azul é só para identificar onde está o elemento por enquanto*/
+    width: 460px;
+    height: 470px;
+    position: relative;
+    border-radius: 30px;
+    background-color:  rgb(40, 3, 82); /*a cor azul é só para identificar onde está o elemento por enquanto*/
 }  
 
 .seçao { /* section que vai conter a div que terá a lista de tarefas*/
     width: 100%;
-    height: 740px;
+    height: 730px;
     display: grid;
     place-items: center;
 }
 
 body {
-    height: 910px;
+    height: auto;
     width: auto;
     display: grid;
+    background-image:linear-gradient(to bottom, rgb(3, 11, 59),rgb(2, 45, 94)) ;/* Cor do fundo da página*/
+}
+
+.adicionar{ /*div para a parte de criar a tarefa e adicionar*/
+    background-color: rgb(40, 3, 82);
+    top: 50px;
+    height:100px;
+    width: 460px;
+    float:left;
+    border-radius: 30px;
 }
