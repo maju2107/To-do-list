@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>TO DO LIST</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>TO DO LIST</title>
 </head>
+
 <body>
-    <!-- Eu coloquei header, section e footer para a nossa página ficar estruturada de acordo com a semântica. Também é bom para a questão de os navegadores "entenderem" a página-->
-    <header></header>
-    <section class="seçao">
-     <div class="listaDiv">  <!-- div que vai conter a lista-->
-        <div class="adicionar"><!--div que vai conter a label de adicionar-->
-            <form>
-                <input type="text" id="fname" name="fname" placeholder="estudar"><br>
-                <button type="reset" aria-label="Adionar o nome do item na lista de tarefas"></button>
-                <br>
-            </form>
-        </div> 
-     </div>
-      
-       </div> 
-    </section>
-    <footer></footer>
-    
+  <!-- Eu coloquei header, section e footer para a nossa página ficar estruturada de acordo com a semântica. Também é bom para a questão de os navegadores "entenderem" a página-->
+  <header>
+      <h1 id="titulo1">
+        TO DO LIST
+        <button id="modoEscuro" aria-label="Botão para alternar para o Modo Escuro"  onclick="ModoClaroEscuro()"><i class="material-icons">brightness_3</i>
+
+        </button>
+       
+      </h1>
+  </header>
+  <section class="seçao">
+    <div> <!--div que vai conter a label de adicionar-->
+        <input class="digite" type="text" id="fname" name="fname" placeholder="Digite uma nova tarefa...">
+        <!--A função pega o texto desse input-->
+        <button class="botaoAdicionar" onclick="adicionarTarefa()">+</button>
+    </div>
+    <div class="listaDiv"> <!-- div que vai conter a lista-->
+      <ul id="lista"><!-- Add the list element -->
+        <li>
+        </li>
+      </ul>
+    </div>
+    <form>
+      <br>
+      <script src="dinamico.js"></script>
+    </form>
+  </section>
+  <footer>
+  </footer>
 </body>
+
 </html>
