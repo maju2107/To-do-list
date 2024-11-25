@@ -41,7 +41,7 @@ body {
     height: auto;
     width: auto;
     display: grid;
-    background-color: hsl(197, 8%, 82%);
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
 }
 .dark-mode{
     background-color: hsl(180, 2%, 12%);
@@ -55,8 +55,10 @@ backdrop-filter: blur(15px);
     margin-top: 2px;
     text-align: center;
     align-items: center;
-    border: 1px solid #ffffff;  
+    border: 1px solid color: #1976d2;  
     margin-bottom:0 ;
+    color: #1976d2;
+
 
 }
 
