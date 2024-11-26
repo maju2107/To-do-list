@@ -1,0 +1,17 @@
+<section class="seção">
+    <div>
+        <input class="digite" type="text" id="fname" name="fname" placeholder="Digite uma nova tarefa...">
+        <button class="botaoAdicionar" onclick="adicionarTarefa()">+</button>
+    </div>
+    <!-- Botões para filtrar tarefas -->
+    <button onclick="mostrarTodasTarefas()">Todas as tarefas</button>
+    <button onclick="mostrarTarefasConcluidas()">Concluídas</button>
+    <button onclick="mostrarTarefasNaoConcluidas()">Não Concluídas</button>
+    <div class="listaDiv">
+      <ul id="lista"></ul>
+    </div>
+    <form>
+      <br>
+      <script src="dinamico.js"></script>
+    </form>
+  </section>
