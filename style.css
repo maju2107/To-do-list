@@ -6,9 +6,8 @@ header {
     text-align: center;
     color: white;
     padding-right: 5px;
-    margin-top: 20px;
+    margin-top: 0;
 }
-
 
 footer {
     height: auto;
@@ -21,12 +20,32 @@ footer {
     /* estilizando a div que vai conter a todo list*/
     margin-top: 1px;
     width: 460px;
-    height: 470px;
+    height: 465px;
     position: relative;
     border-radius: 30px;
     background-image: linear-gradient(to bottom, rgba(189, 186, 186, 1), rgba(249, 247, 247, 1));
+    overflow-y: scroll;
+}
 
+.listaDiv::-webkit-scrollbar { /* Estiliza a barra de rolagem */ 
+    width: 15px; 
+    height: auto;
+    padding: 17px;
+ }
 
+.listaDiv::-webkit-scrollbar-track { /* Estiliza o fundo da barra de rolagem */ 
+    background: transparent; 
+    border-radius: 50px; 
+} 
+.listaDiv::-webkit-scrollbar-thumb {  /* Estiliza o polegar da barra de rolagem */ 
+    background: #514b44; 
+    border-radius: 10px;
+    height: 50px;
+    
+} 
+  /* Estiliza o polegar da barra de rolagem ao passar o mouse */ 
+.listaDiv::-webkit-scrollbar-thumb:hover { 
+    background: #706057; 
 }
 
 .seçao {
@@ -41,8 +60,9 @@ body {
     height: auto;
     width: auto;
     display: grid;
-    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    background-color: hsl(22, 9%, 53%);
 }
+
 .dark-mode{
     background-color: hsl(180, 2%, 12%);
 }
@@ -55,11 +75,8 @@ backdrop-filter: blur(15px);
     margin-top: 2px;
     text-align: center;
     align-items: center;
-    border: 1px solid color: #1976d2;  
+    border: 1px solid #ffffff;  
     margin-bottom:0 ;
-    color: #1976d2;
-
-
 }
 
 input[type="text"] {
@@ -70,11 +87,16 @@ input[type="text"] {
     border: 1px solid #ffffff;
     border-radius: 30px;
     cursor: text;
+    font-family: pt-sans-regular;
+    font-size: medium;
 }
 
 input[type="text"]:visited {
     color: white;
-    
+}
+
+input::placeholder{
+    color: hsl(180, 100%, 99%);
 }
 
 .tarefa {
@@ -88,13 +110,16 @@ input[type="text"]:visited {
 }
 
 #lista li {
+    color: hsl(60, 1%, 21%);
     margin-bottom: 10px;
     padding: 4px;
     border-radius: 10px;
-    background-color: #f2f2f2;
+    background-color: hsl(34, 26%, 73%);
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 4px;
+    word-wrap: break-word; /* Faz com que o texto quebre para a próxima linha */
+    font-family: pt-sans-regular;
 }
 
 
@@ -102,12 +127,9 @@ input[type="text"]:visited {
     color: white;
 }
 
-.listaDiv {
-    /*div que vai conter a lista*/
-    background: transparent;
-    /*possibilita a div de tarefas ficar transparente*/
-    backdrop-filter: blur(15px);
-    /*diferenciar a div de tarefas do fundo da página*/
+.listaDiv {                        /*div que vai conter a lista*/
+    background: transparent; /*possibilita a div de tarefas ficar transparente*/
+    backdrop-filter: blur(15px); /*diferenciar a div de tarefas do fundo da página*/
     margin-top: 1px;
     width: 460px;
     height: 470px;
@@ -126,14 +148,12 @@ ul {
 
 li {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid hsl(20, 13%, 86%);
 }
 
 .todo-item.favorita {
-    color: red;
+    color: hsl(0, 75%, 30%);
     font-weight: bold;
-    background-color: #ffe6e6;
-
 }
 
 .botaoAdicionar {
@@ -145,19 +165,17 @@ li {
     text-decoration: none;
     outline: none;
     color: #fff;
-    /*background-color: gray;*/
     background-color: transparent;
-    /*border: none;*/
     border-radius: 50%;
     border: 2px solid white;
 }
 
 .botaoAdicionar:hover {
-    background-color: lightgray;
+    background-color: hsl(36, 21%, 41%);
 }
 
 .botaoAdicionar:active {
-    background-color: gray;
+    background-color: hsl(29, 17%, 39%);
     transform: translateY(4px);
 }
 
@@ -166,30 +184,54 @@ li {
     height: 20px;
     background: transparent;
     border: 2px solid white;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: -60px;
 }
 
 .digite::selection{
     border-color: #ffffff;
 }
 
+.editar{   /**botão de editar*/
+    background-color:  hsl(34, 26%, 73%);
+    padding: 3px 3px 3px 3px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #525050;
+    font-family: pt-sans-regular;
+    font-size: 15px;
+}
+.editar:hover{
+    background-color: hsl(41, 21%, 42%);
+    color: white;
+}
 
-/*.editar{
- /**botão de editar*/
-/*}*/
 #excluir{ /*botão de excluir*/
+    background-color:  hsl(34, 26%, 73%);
     float: right;
     padding: 3px 3px 3px 3px;
     border: 2px solid transparent;
     border-radius: 5px;
 }
 #excluir:hover {
-    background-color: hsl(0, 0%, 56%);
+    background-color: hsl(41, 21%, 42%);
     color: white;
-  }
-/*.botaofavorito{*/
-/*botão de marcar favorito*/
-/*}*/
+}
+
+.botaofavorito{ /*botão de marcar favorito*/
+    background-color:  hsl(34, 26%, 73%);
+    padding: 3px 3px 3px 3px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #525050;
+    font-family: pt-sans-regular;
+    font-size: 15px;
+}
+
+.botaofavorito:hover{
+    background-color: hsl(41, 21%, 42%);
+    color: white;
+}
 
 #modoEscuro{
     background: transparent;
@@ -205,5 +247,35 @@ li {
 }
 
 .material-icons{
-    color: #ffe6e6;
+    color: hsl(245, 100%, 94%);
 }
+
+.todo-buttons{
+   padding-top: 10px;
+   height: 33px;
+}
+
+.Filtro{
+    display: inline;
+    margin-bottom: -50px;
+}
+
+.Cima{
+    border-radius: 20px;
+    margin-left: 10px;
+    background: transparent;
+    color: #f2f2f2;
+    border: transparent;
+    font-size: 18px;
+    font-family: pt-sans-regular;
+}
+
+.Cima:hover{
+    background-color: hsl(0, 4%, 47%);
+}
+
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
