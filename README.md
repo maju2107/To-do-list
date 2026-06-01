@@ -4,7 +4,7 @@ Uma aplicação de lista de tarefas desenvolvida para auxiliar na organização 
 
 ## 📌 Funcionalidades
 
-- ➕ Adicionar novas tarefas
+- ➕  Adicionar novas tarefas
 - ✅ Marcar tarefas como concluídas
 - 🗑️ Remover tarefas
 - ✏️ Editar tarefas
